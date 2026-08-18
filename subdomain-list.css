@@ -1,0 +1,102 @@
+/* SubdomainUX — subdomain-list.css */
+
+/* Toggle button */
+.sdux-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: .72em;
+    color: #8a9bb0;
+    margin-left: 8px;
+    vertical-align: middle;
+    transition: background .15s, color .15s;
+    line-height: 1.7;
+}
+.sdux-toggle:hover,
+.sdux-toggle.sdux-open {
+    background: var(--primary-color, #3d7c9f);
+    color: #fff;
+    border-color: var(--primary-color, #3d7c9f);
+}
+.sdux-arrow {
+    display: inline-block;
+    font-size: .65em;
+    transition: transform .18s;
+}
+.sdux-toggle.sdux-open .sdux-arrow {
+    transform: rotate(90deg);
+}
+.sdux-badge {
+    background: var(--primary-color, #3d7c9f);
+    color: #fff;
+    border-radius: 20px;
+    padding: 0 5px;
+    font-size: .85em;
+    font-weight: 700;
+    line-height: 1.5;
+    min-width: 16px;
+    text-align: center;
+}
+.sdux-toggle:hover .sdux-badge,
+.sdux-toggle.sdux-open .sdux-badge {
+    background: rgba(255,255,255,.3);
+}
+
+/* Hidden child rows */
+.sdux-child-hidden {
+    display: none !important;
+}
+
+/* Child row — same as parent row visually, slightly different background */
+.sdux-child {
+    background: rgba(0,0,0,.15) !important;
+}
+.sdux-child:hover {
+    background: rgba(0,0,0,.22) !important;
+}
+
+/* Indent the name cell of child rows */
+.sdux-child-name-cell {
+    padding-left: 36px !important;
+}
+
+/* Tree connector */
+.sdux-tree {
+    color: #4a5a6a;
+    margin-right: 4px;
+    font-size: .9em;
+    flex-shrink: 0;
+}
+
+/* Prefix bold, parent faded */
+.sdux-prefix {
+    font-weight: 600;
+}
+.sdux-parent-suffix {
+    opacity: .45;
+    font-weight: 400;
+}
+
+/* Active/Suspended badge */
+.sdux-status-badge {
+    display: inline-block;
+    font-size: .68em;
+    padding: 1px 7px;
+    border-radius: 20px;
+    background: rgba(70,151,100,.18);
+    color: #6ec98a;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-left: 8px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.sdux-status-badge.sdux-suspended {
+    background: rgba(193,115,82,.18);
+    color: #e09a72;
+}

@@ -1,0 +1,127 @@
+/* SubdomainUX — subdomain-add.css */
+
+/* Add Subdomain button */
+.sdux-btn-sub { margin-left: 8px; }
+
+/* Validation */
+.sdux-error {
+    color: #e07070;
+    font-size: .82em;
+    margin-top: 4px;
+    min-height: 1em;
+}
+.sdux-input-error {
+    border-color: #e07070 !important;
+    box-shadow: 0 0 0 2px rgba(224,112,112,.18) !important;
+}
+
+/* Modal overlay */
+.sdux-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(0,0,0,.6);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.sdux-overlay.sdux-visible {
+    display: flex;
+}
+
+/* Modal box */
+.sdux-modal {
+    background: var(--app-bg, #1e2433);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+/* Header */
+.sdux-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.sdux-modal-head h2 {
+    font-size: .95em;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color, #cdd6e0);
+}
+.sdux-modal-head h2 i { color: #6ec98a; }
+.sdux-close {
+    background: none;
+    border: none;
+    color: #8a9bb0;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: color .12s, background .12s;
+}
+.sdux-close:hover { color: #cdd6e0; background: rgba(255,255,255,.06); }
+
+/* Body */
+.sdux-modal-body { padding: 18px; }
+
+/* Split input */
+.sdux-split {
+    display: flex;
+    align-items: center;
+}
+.sdux-split .form-control {
+    border-radius: 4px 0 0 4px !important;
+    border-right: none !important;
+    flex: 1;
+    min-width: 0;
+}
+.sdux-dot {
+    background: var(--form-element-bg, rgba(255,255,255,.05));
+    border: 1px solid var(--form-element-border, rgba(255,255,255,.12));
+    border-left: none;
+    border-right: none;
+    padding: 0 6px;
+    color: #8a9bb0;
+    font-weight: 700;
+    font-size: 1.05em;
+    line-height: 36px;
+    flex-shrink: 0;
+}
+.sdux-split .form-select {
+    border-radius: 0 4px 4px 0 !important;
+    border-left: none !important;
+    flex: 1.3;
+    min-width: 0;
+}
+
+/* Preview */
+.sdux-preview {
+    font-size: .81em;
+    color: #8a9bb0;
+    margin-top: 4px;
+    min-height: 1.1em;
+}
+.sdux-fqdn-preview {
+    color: var(--primary-color, #3d7c9f);
+    font-weight: 600;
+}
+
+/* Footer */
+.sdux-modal-foot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
